@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap" rel="stylesheet">
+</head>
+<style>
+     ::-webkit-scrollbar {
+          width: 10px;
+          /* Width of the vertical scrollbar */
+          height: 10px;
+          /* Height of the horizontal scrollbar */
+     }
+
+     ::-webkit-scrollbar-track {
+          background: transparent;
+          /* Color of the scrollbar track */
+          border-radius: 10px;
+     }
+
+     ::-webkit-scrollbar-thumb {
+          background: rgba(239, 119, 115, 0.559);
+          /* Color of the scrollbar thumb */
+          border-radius: 10px;
+     }
+
+     ::-webkit-scrollbar-thumb:hover {
+          background: #640707;
+          /* Color when hovering over the thumb */
+     }
+
+     body {
+          background-image: url(bg.jpg);
+          height: 90vh;
+          background-repeat: repeat;
+          background-size: cover;
+          font-family: 'BBH Bogle', sans-serif;
+     }
+
+     .head {
+          background-color: transparent;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          padding: 20px;
+          width: 97%;
+          height: 60px;
+          border-radius: 20px;
+          font-size: 15px;
+          color: rgb(86, 42, 42);
+     }
+
+     .head img {
+          width: 80px;
+          border-radius: 50%;
+     }
+
+     .main {
+          background-color: rgba(240, 248, 255, 0);
+          box-shadow: 0 0 8px rgba(67, 65, 65, 0.471), inset 0 0 7px rgba(226, 224, 224, 0.659);
+          margin-top: 20px;
+          backdrop-filter: blur(10px);
+          display: flex;
+          width: 96%;
+          margin-left: 20px;
+          height: 80vh;
+          align-items: space-around;
+          justify-content: center;
+          flex-direction: column;
+          gap: 5px;
+          border-radius: 20px;
+          padding: 10px;
+          padding-top: 510px;
+          box-sizing: border-box;
+          overflow-y: scroll;
+          overflow-x: hidden;
+     }
+
+     .in {
+          width: 100%;
+          padding: 15px;
+          height: 25px;
+          display: flex;
+          align-items: center;
+          /* justify-content: center; */
+          gap: 20px;
+     }
+
+     .in p {
+          font-size: 30px;
+          color: rgb(143, 141, 141);
+     }
+
+     .in button {
+          background: linear-gradient(80deg, rgb(101, 10, 10), rgb(161, 37, 37));
+          border: none;
+          outline: none;
+          font-weight: 700;
+          width: 200px;
+          height: 40px;
+          border-radius: 6px;
+          color: white;
+          padding: 10px;
+          cursor: pointer;
+          transition: 0.2s ease;
+          box-shadow: inset 0 0 9px rgba(246, 152, 152, 0.833);
+          box-shadow: 0 0 0px rgb(68, 12, 12);
+     }
+
+     .in button:hover {
+          background-color: rgb(138, 63, 63);
+          transform: scale(1.04);
+          box-shadow: 0 0 20px rgba(68, 12, 12, 0.59);
+     }
+
+     .iin {
+          width: 100%;
+          padding: 15px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          /* justify-content: center; */
+          gap: 20px;
+     }
+
+     .iin p {
+          font-size: 20px;
+     }
+
+     .iin button {
+          background: linear-gradient(80deg, rgb(101, 10, 10), rgb(161, 37, 37));
+          border: none;
+          outline: none;
+          font-weight: 700;
+          width: 200px;
+          height: 40px;
+          border-radius: 6px;
+          color: white;
+          padding: 10px;
+          cursor: pointer;
+          transition: 0.2s ease;
+          box-shadow: inset 0 0 9px rgba(246, 152, 152, 0.833);
+          box-shadow: 0 0 0px rgb(68, 12, 12);
+     }
+
+     .iin button:hover {
+          background-color: rgb(138, 63, 63);
+          transform: scale(1.04);
+          box-shadow: 0 0 20px rgba(68, 12, 12, 0.59);
+     }
+
+     #six table {
+          border-collapse: collapse;
+          text-align: center;
+          font-size: 20px;
+          border-radius: 20px;
+     }
+
+     #six th,
+     #six td {
+          border: 1px solid #555;
+          padding: 10px 15px;
+     }
+
+     #six th {
+          color: white;
+     }
+
+     #six tr {
+          color: #f2f2f2;
+     }
+
+     #six tr:hover {
+          background-color: #dddddd6d;
+     }
+</style>
+
+<body>
+     <div class="head">
+          <img src="icni.png" alt="">
+          <h1>Itz_professionalhere</h1>
+     </div>
+     <div class="main">
+          <div class="in">
+               <button onclick="one()">Tell me city!</button>
+               <p id="one"></p>
+          </div>
+          <div class="in">
+               <button onclick="two()">Tell me Gender!</button>
+               <p id="two"></p>
+          </div>
+          <div class="in">
+               <button onclick="three()">Tell me traffic color!</button>
+               <p id="three"></p>
+          </div>
+          <div class="in">
+               <button onclick="four()">Tell me current fuel!</button>
+               <p id="four"></p>
+          </div>
+          <div class="in">
+               <button onclick="five()">Check what they say!</button>
+          </div>
+          <div class="iin">
+               <button onclick="six()">Tell me marks!</button>
+               <div id="six"></div>
+          </div>
+          <div class="in">
+               <button onclick="seven()">Guess the number!</button>
+               <p id="seven"></p>
+          </div>
+          <div class="in">
+               <button onclick="eight()">Divisible by 3?</button>
+               <p id="eight"></p>
+          </div>
+          <div class="in">
+               <button onclick="nine()">Even VS Odd!</button>
+               <p id="nine"></p>
+          </div>
+          <div class="in">
+               <button onclick="ten()">Check weather!</button>
+               <p id="ten"></p>
+          </div>
+          <div class="in">
+               <button onclick="eleven()">Calculate!</button>
+               <p id="eleven"></p>
+          </div>
+          <div class="in">
+               <button onclick="twelve()">Its UPPER oR lower!</button>
+               <p id="twelve"></p>
+          </div>
+          <div class="in">
+               <button onclick="thirteen()">Wgo is great!!</button>
+               <p id="thirteen"></p>
+          </div>
+          <div class="in">
+               <button onclick="fourteen()">+ - or 0!</button>
+               <p id="fourteen"></p>
+          </div>
+          <div class="in">
+               <button onclick="fifteen()">aeiou!</button>
+               <p id="fifteen"></p>
+          </div>
+          <div class="in">
+               <button onclick="sixteen()">Tell me password!</button>
+               <p id="sixteen"></p>
+          </div>
+          <div class="in">
+               <button onclick="seven9()">Debug succesfull!!</button>
+               <p id="seven9"></p>
+          </div>
+          <div class="in">
+               <button onclick="eteen()">Time!?</button>
+               <p id="I8"></p>
+          </div>
+     </div>
+     <script src="app.js"></script>
+</body>
+
+</html>
