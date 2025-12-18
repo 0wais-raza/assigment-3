@@ -40,6 +40,7 @@
           background-repeat: repeat;
           background-size: cover;
           font-family: 'BBH Bogle', sans-serif;
+          overflow: hidden;
      }
 
      .head {
@@ -53,6 +54,8 @@
           border-radius: 20px;
           font-size: 15px;
           color: rgb(86, 42, 42);
+          transform: translateX(0px);
+          animation: intro 2s cubic-bezier(0, 0, 0.62, 1.05);
      }
 
      .head img {
@@ -60,11 +63,21 @@
           border-radius: 50%;
      }
 
+     @keyframes intro {
+          from {
+               transform: translateX(-600px);
+          }
+
+          to {
+               transform: translateX(0px);
+          }
+     }
+
      .main {
           background-color: rgba(240, 248, 255, 0);
           box-shadow: 0 0 8px rgba(67, 65, 65, 0.471), inset 0 0 7px rgba(226, 224, 224, 0.659);
           margin-top: 20px;
-          backdrop-filter: blur(10px);
+          backdrop-filter: blur(4px);
           display: flex;
           width: 96%;
           margin-left: 20px;
@@ -79,6 +92,18 @@
           box-sizing: border-box;
           overflow-y: scroll;
           overflow-x: hidden;
+          transform: translateY(0px);
+          animation: inro2 2s ease-out;
+     }
+
+     @keyframes inro2 {
+          from {
+               transform: translateY(900px);
+          }
+
+          to {
+               transform: translateY(0px);
+          }
      }
 
      .in {
@@ -234,7 +259,7 @@
                <p id="twelve"></p>
           </div>
           <div class="in">
-               <button onclick="thirteen()">Wgo is great!!</button>
+               <button onclick="thirteen()">Who is great!!</button>
                <p id="thirteen"></p>
           </div>
           <div class="in">
